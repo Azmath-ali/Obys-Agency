@@ -907,6 +907,12 @@ html,body{
 
 
 @media (max-width:600px) {
+
+    #main{
+        position: relative;
+        background-color: #151515;
+        overflow: hidden;
+    }
     
     #page1{
         width: 100vw;
