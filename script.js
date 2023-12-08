@@ -246,16 +246,3 @@ document.querySelector("#center3").addEventListener("mouseleave",function(){
     })
 })
 
-
-
-
-
-
-gsap.from(".head",{
-    opacity:0,
-    duration:.2,
-    onStart:function(){
-        $('.head').textillate({ in: { effect: 'fadeIn' } })
-    }
-   
-})
