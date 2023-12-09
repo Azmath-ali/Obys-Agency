@@ -932,11 +932,6 @@ html,body{
 
 @media (max-width:600px) {
 
-    #main{
-        position: relative;
-        background-color: #151515;
-        overflow: hidden;
-    }
     
     #page1{
         width: 100vw;
@@ -1433,6 +1428,12 @@ html,body{
     #footer>h2{
         font-size: 4vw;
         margin-top: 8vw;
+    }
+
+
+    ._canvas_container{
+        z-index: 999999 !important;
+        pointer-events: none;
     }
 
 }
