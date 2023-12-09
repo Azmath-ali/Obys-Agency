@@ -1038,6 +1038,7 @@ html,body{
         position: relative;
         /* background-color: red; */
         margin-top: -10vw;
+        margin-bottom: 10vw;
         
     }
 
@@ -1092,7 +1093,7 @@ html,body{
         min-height: 100vh;
         padding: 10vw 2vw;
         position: relative;
-        margin-top: -35vw;
+        margin-top: -55vw;
         /* background-color: red; */
         /* margin-bottom: 50vw; */
     }
