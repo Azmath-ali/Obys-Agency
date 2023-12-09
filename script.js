@@ -84,7 +84,7 @@ tl
     .to("#loader",{
         opacity:0,
         duration:.2,
-        delay:3
+        delay:2.6
     })   
 
 
@@ -146,6 +146,8 @@ tl
 }
 
 Shery.makeMagnet("#nav-bar h4")
+
+
 
 function sheryAnimation(){
     Shery.imageEffect(".image-div",{
@@ -245,4 +247,64 @@ document.querySelector("#center3").addEventListener("mouseleave",function(){
         opacity:0
     })
 })
+
+
+
+
+
+function footerAnimation(){
+    var clutter=""
+    var clutter2=""
+
+
+    document.querySelector("#footer-div h1").textContent.split("").forEach(function(val){
+        clutter+=`<span>${val}</span>`
+    })
+
+    document.querySelector("#footer-div h1").innerHTML=clutter
+
+    document.querySelector("#footer-div").addEventListener("mouseenter",function(){
+        gsap.to("#footer h1 span",{
+            opacity:0,
+            stagger:.1
+        })
+    })
+
+
+
+    document.querySelector("#footer-div").addEventListener("mouseleave",function(){
+        gsap.to("#footer h1 span",{
+            opacity:1,
+            stagger:.05
+        })
+    })
+
+
+
+    document.querySelector("#footer-div h2").textContent.split("").forEach(function(val){
+        clutter2+=`<span>${val}</span>`
+    })
+
+    document.querySelector("#footer-div h2").innerHTML=clutter2
+
+
+    document.querySelector("#footer div").addEventListener("mouseenter",function(){
+        gsap.to("#footer h2 span",{
+            opacity:1,
+            delay: .35,
+            stagger:.1
+        })
+    })
+
+
+
+    document.querySelector("#footer-div").addEventListener("mouseleave",function(){
+        gsap.to("#footer h2 span",{
+            opacity:0,
+            stagger:.05
+        })
+    })
+}
+
+footerAnimation()
 

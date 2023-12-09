@@ -821,7 +821,7 @@ html,body{
 
 #footer{
     width: 100vw;
-    height: 90vh;
+    min-height: 100vh;
     /* background-color: #151515; */
     padding-left: 28%;
     position: relative;
@@ -829,12 +829,35 @@ html,body{
     margin-top: 3vw;
 }
 
-#footer h1{
-    font-size: 7vw;
+#footer-div{
     position: relative;
 }
 
-#footer h1::before{
+#footer h1{
+    font-size: 7vw;
+    position: relative;
+    font-family: "silk serif";
+}
+
+#footer-div h2{
+    font-size: 7vw;
+    position: absolute;
+    left: 0;
+    top: -2%;
+    font-family: "silk serif";
+}
+
+
+#footer-div h2 span{
+    font-family: "silk serif";
+    opacity: 0;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+
+}
+
+
+#footer-div::before{
     content: "04";
     position: absolute;
     left: -15%;
@@ -886,13 +909,14 @@ html,body{
 }
 
 
-#footer>h2{
+#footer>h4{
     font-size: 1vw;
 }
 
 
 ._canvas_container{
     z-index: 999999 !important;
+    pointer-events: none;
 }
 
 
