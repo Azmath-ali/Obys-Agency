@@ -82,15 +82,15 @@ tl
 
   
     .to("#loader",{
-        opacity:0,
-        duration:.2,
+        y:-1000,
+        duration:1,
         delay:2.6
     })   
 
 
     .from("#page1",{
         y:1600,
-        delay: .2,
+        delay: .1,
         opacity:0, 
         duration:.5,
         ease:Power4
@@ -157,10 +157,68 @@ function sheryAnimation(){
     })
 }
 
+
+function footerAnimation(){
+    var clutter=""
+    var clutter2=""
+
+
+    document.querySelector("#footer-div h1").textContent.split("").forEach(function(val){
+        clutter+=`<span>${val}</span>`
+    })
+
+    document.querySelector("#footer-div h1").innerHTML=clutter
+
+    document.querySelector("#footer-div").addEventListener("mouseenter",function(){
+        gsap.to("#footer h1 span",{
+            opacity:0,
+            stagger:.1
+        })
+    })
+
+
+
+    document.querySelector("#footer-div").addEventListener("mouseleave",function(){
+        gsap.to("#footer h1 span",{
+            opacity:1,
+            stagger:.05
+        })
+    })
+
+
+
+    document.querySelector("#footer-div h2").textContent.split("").forEach(function(val){
+        clutter2+=`<span>${val}</span>`
+    })
+
+    document.querySelector("#footer-div h2").innerHTML=clutter2
+
+
+    document.querySelector("#footer div").addEventListener("mouseenter",function(){
+        gsap.to("#footer h2 span",{
+            opacity:1,
+            delay: .35,
+            stagger:.1
+        })
+    })
+
+
+
+    document.querySelector("#footer-div").addEventListener("mouseleave",function(){
+        gsap.to("#footer h2 span",{
+            opacity:0,
+            stagger:.05
+        })
+    })
+}
+
+
+
 locomotiveAnimation();
 cursorAnimation();
 loaderAnimation();
 sheryAnimation();
+footerAnimation();
 
 
 
@@ -252,59 +310,4 @@ document.querySelector("#center3").addEventListener("mouseleave",function(){
 
 
 
-function footerAnimation(){
-    var clutter=""
-    var clutter2=""
-
-
-    document.querySelector("#footer-div h1").textContent.split("").forEach(function(val){
-        clutter+=`<span>${val}</span>`
-    })
-
-    document.querySelector("#footer-div h1").innerHTML=clutter
-
-    document.querySelector("#footer-div").addEventListener("mouseenter",function(){
-        gsap.to("#footer h1 span",{
-            opacity:0,
-            stagger:.1
-        })
-    })
-
-
-
-    document.querySelector("#footer-div").addEventListener("mouseleave",function(){
-        gsap.to("#footer h1 span",{
-            opacity:1,
-            stagger:.05
-        })
-    })
-
-
-
-    document.querySelector("#footer-div h2").textContent.split("").forEach(function(val){
-        clutter2+=`<span>${val}</span>`
-    })
-
-    document.querySelector("#footer-div h2").innerHTML=clutter2
-
-
-    document.querySelector("#footer div").addEventListener("mouseenter",function(){
-        gsap.to("#footer h2 span",{
-            opacity:1,
-            delay: .35,
-            stagger:.1
-        })
-    })
-
-
-
-    document.querySelector("#footer-div").addEventListener("mouseleave",function(){
-        gsap.to("#footer h2 span",{
-            opacity:0,
-            stagger:.05
-        })
-    })
-}
-
-footerAnimation()
 
